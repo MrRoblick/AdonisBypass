@@ -25,16 +25,16 @@ for i, v in getgc(true) do
 
     if typeof(DetectFunc) == "function" and not Detected then
         Detected = DetectFunc
-        hookfunction(DetectFunc, function()
+        hookfunction(DetectFunc, newcclosure(function()
             return true
-        end)
+        end))
     end
 
     if rawget(v, "Variables") and rawget(v, "Process") and typeof(KillFunc) == "function" and not Kill then
         Kill = KillFunc
-        hookfunction(KillFunc, function()
+        hookfunction(KillFunc, newcclosure(function()
             return true
-        end)
+        end))
     end
 end
 
