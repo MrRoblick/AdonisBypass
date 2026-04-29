@@ -1,1 +1,1 @@
-Add "ModernAdonisBypass.luau" this bypass script into AutoExec folder
+Add this "ModernAdonisBypass.luau" bypass script into AutoExec folder
