@@ -26,7 +26,7 @@ local OldGetfenv; OldGetfenv = oth.hook(RobloxEnv.getfenv, function(Func: (numbe
         local Env = OldGetfenv(TargetLevel)
         local mt = getrawmetatable(Env)
         if mt and mt.__index == ExploitEnvIndex then
-            return RobloxEnv 
+            return error("invalid argument #1 to 'getfenv' (invalid level)", 0)
         end 
         return Env
     end
