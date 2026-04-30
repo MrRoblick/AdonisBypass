@@ -38,5 +38,5 @@ local OldSetfenv; OldSetfenv = oth.hook(RobloxEnv.setfenv, function(Func: (numbe
             end
         end
     end
-    return OldSetfenv(Func, NewEnv)
+    return OldSetfenv(Func + 1, NewEnv)
 end)
